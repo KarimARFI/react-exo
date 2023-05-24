@@ -1,0 +1,11 @@
+.table th{
+    color: magenta;
+}
+
+.green {
+    --bs-table-bg: var(--bs-success);
+}
+
+.red {
+    --bs-table-bg: var(--bs-danger);
+}

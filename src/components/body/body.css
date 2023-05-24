@@ -1,0 +1,17 @@
+#body{
+    border: 2px solid yellow;
+    padding: 1rem;
+    width: 85vw;
+    min-height: 85vh;
+}
+
+#notfound{
+    display: flex;
+    justify-content: center;
+    height: 90%;
+    
+}
+#notfound img{
+    object-fit: contain;
+    max-width: 60%;
+}

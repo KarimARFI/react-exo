@@ -1,0 +1,16 @@
+#flex{
+ display: flex;
+ flex-direction: row;
+ flex-wrap: wrap;
+ justify-content: space-evenly;
+ row-gap: 2rem;
+}
+#card{
+    color: black;
+    background-color: white;
+}
+#card img{
+    object-fit: contain;
+    aspect-ratio: 4/2;
+    margin: 0 auto;
+}
