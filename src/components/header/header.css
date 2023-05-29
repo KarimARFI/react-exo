@@ -2,10 +2,14 @@
     height: 8vmin;
     pointer-events: none;
   }
+  img[src="picture/framboise.png"]{
+    width: 50px;
+    object-fit: contain;
+  }
   
   @media (prefers-reduced-motion: no-preference) {
     .App-logo {
-      animation: App-logo-spin infinite 2s ease-in-out;
+      animation: App-logo-spin infinite 8s linear;
     }
   }
   @keyframes App-logo-spin {

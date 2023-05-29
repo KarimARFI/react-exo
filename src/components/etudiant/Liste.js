@@ -3,23 +3,23 @@ import './etudiant.css'
 import Table from 'react-bootstrap/Table';
 
 const etudiant = [
-    { name: "Ekless", firstName: "Dominga", mean: 19.46 },
-    { name: "Owbridge", firstName: "Adriano", mean: 5.94 },
-    { name: "McCutheon", firstName: "Cob", mean: 14.27 },
-    { name: "Piecha", firstName: "Cassey", mean: 10.23 },
+    { name: "Ekless", firstName: "Dominga", mean: 9.00 },
+    { name: "Owbridge", firstName: "Adriano", mean: 9.99},
+    { name: "McCutheon", firstName: "Cob", mean: 10.00 },
+    { name: "Piecha", firstName: "Cassey", mean: 10.01 },
     { name: "Rubenov", firstName: "Bancroft", mean: 18.64 },
     { name: "Hebborn", firstName: "Diego", mean: 4.42 },
-    { name: "Tunnoch", firstName: "Martie", mean: 4.1 },
-    { name: "Keese", firstName: "Trenna", mean: 17.2 },
-    { name: "Champkin", firstName: "Bondie", mean: 17.14 },
-    { name: "Cecely", firstName: "Zenia", mean: 14.88 }
+    { name: "Keese", firstName: "Trenna", mean: 10.0 },
+    { name: "Tunnoch", firstName: "Martie", mean: 9.9 },
+    { name: "Champkin", firstName: "Bondie", mean: 1.0 },
+    { name: "Cecely", firstName: "Zenia", mean: 20 }
 ]
 
 function Liste() {
     return (
         <>
             <h4>Liste des étudiants</h4>
-            <p className='info'>liste avec boucle react et sur la td des moyennes className avec ternaire pour coloriser selon la moyenne</p>
+            <p className='info'>liste en tableau d'objet avec boucle react. Colonne des moyennes ternaire (intégré dans le className) pour coloriser si moyenne &gt;= 10</p>
             <Table bordered hover variant="dark" size="sm">
                 <thead>
                     <tr>
@@ -29,7 +29,7 @@ function Liste() {
                     </tr>
                 </thead>
                 <tbody>
-                    {/* création de balise irectement aprés fonction fléché */}
+                    {/* création de balise directement aprés fonction fléché */}
                     {etudiant.map(etud =>
                         <tr>
                             <td>{etud.name}</td>
@@ -45,12 +45,13 @@ function Liste() {
             <Table bordered hover variant="dark" size="sm">
                 <thead>
                     <tr>
-                        <th>First Name</th>
-                        <th>Last Name</th>
+                        <th>Nom</th>
+                        <th>Prénom</th>
                         <th>Moyenne</th>
                     </tr>
                 </thead>
                 <tbody>
+                    {/* affichage des admis si moyenne sup a 10 */}
                     {/* utilisation d'une condition donc obligation d'un return et d'acolade aprés la fonction fléché */}
                     {etudiant.map(person => {
                         if (person.mean >= 10) {
@@ -62,6 +63,7 @@ function Liste() {
                                 </tr>
                             )
                         }
+                        return null;
                     })}
                 </tbody>
             </Table>
