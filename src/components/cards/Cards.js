@@ -28,6 +28,8 @@ function Cards() {
     const [modal, setModal] = useState(false);
     const modalClose = () => setModal(false);
     // const modalShow = () => setModal(true);
+
+    //console log des différent id et type pour vérification
     const modalShow = () => { console.log("modalShow saisieId : "+(typeof saisieId)+" / modalShow incrementId : "+incrementId); setModal(true)};
     
     /** capture des values, des champs du modal */
@@ -49,7 +51,7 @@ function Cards() {
     }
 
     /** Ajout d'une cards. creation d'un tableau reference pour traitement puis écrasement du tableau d'origine */
-    const incrementId = newData.length+1; /**calcul de la long du tab +1 pour incrementation du champs disable du form */
+    const incrementId = newData.length+1; /**calcul de la longueur du tab +1 pour incrementation du champs disable du form */
     const handleSubmit = (event)=> {
         event.preventDefault();
         if(saisieId === undefined){
@@ -113,8 +115,6 @@ function Cards() {
         );
         modalClose();
       };
-      
-
 
     /* ######## AFFICHAGE ######## */
     return (
